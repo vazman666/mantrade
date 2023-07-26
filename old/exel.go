@@ -1,0 +1,75 @@
+package pkg
+
+import (
+	"mantrade/models"
+)
+
+func Exel(data []models.Sql) {
+	/*type xlsxstruct struct {
+		Firm       string
+		PartNumber string
+		Name       string
+		Price      float32
+		Quantity   int
+		Summ       float32
+		Remark     string
+	}
+	var xlsdata []xlsxstruct
+	for _, i := range data {
+		var tmp xlsxstruct
+		tmp.Firm = i.Firm
+		tmp.PartNumber = i.Number
+		tmp.Name = i.Name
+		value, _ := strconv.ParseFloat(i.Price, 32)
+		tmp.Price = float32(value)
+		tmp.Quantity, _ = strconv.Atoi(i.Quantity)
+		tmp.Summ = tmp.Price * float32(tmp.Quantity)
+		tmp.Remark = i.Remark
+		xlsdata = append(xlsdata, tmp)
+	}
+
+	wb := xlsx.NewFile() //создаём новый экскиз экселя
+
+	sheetTest, err := wb.AddSheet("test") //добавляем страничку
+	if err != nil {
+		panic(err)
+	}
+	sheetTest.SetColWidth(1, 1, 8)  // c 1 по 1 ширина 8
+	sheetTest.SetColWidth(2, 2, 16) // с 2 по 3 ширина 16
+	sheetTest.SetColWidth(3, 3, 55)
+	sheetTest.SetColWidth(4, 9, 13)
+
+	row1 := sheetTest.AddRow()
+
+	cell := row1.AddCell()
+	cell.SetValue("Firm")
+	cell = row1.AddCell()
+	cell.SetValue("PartNumber")
+	cell = row1.AddCell()
+	cell.SetValue("Name")
+	cell = row1.AddCell()
+	cell.SetValue("Цена")
+	cell = row1.AddCell()
+	cell.SetValue("Количество")
+	cell = row1.AddCell()
+	cell.SetValue("Сумма")
+	cell = row1.AddCell()
+	cell.SetValue("Примечание")
+	row1.SetHeight(15)
+	row1 = sheetTest.AddRow()
+	cell = row1.AddCell()
+	cell.SetValue("")
+
+	for _, value := range xlsdata {
+
+		row1 = sheetTest.AddRow()        //добавляем строку
+		_ = row1.WriteStruct(&value, -1) //и вставляе в эту строку строку из прайс
+		row1.SetHeight(15)
+
+	}
+	err = wb.Save("a.xlsx")
+	if err != nil {
+		panic(err)
+	}*/
+
+}
